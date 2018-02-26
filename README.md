@@ -6,31 +6,18 @@ Slack team's export (instead of having to dive into hundreds of JSON files).
 ![Preview](screenshot.png)
 
 
+## Contents
+
+* [Overview](#overview)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Acknowledgements](#acknowledgements)
+
 ## Overview
 
 `slack-export-viewer` is useful for small teams on a free Slack plan (limited to 10,000 messages) who overrun their budget and ocassionally need a nice interface to refer back to previous messages. You get a web interface to easily scroll through all channels in the export without having to look at individual JSON files per channel per day.
 
 `slack-export-viewer` can be used locally on one machine for yourself to explore an export or it can be run on a headless server (as it is a Flask web app) if you also want to serve the content to the rest of your team.
-
-
-## Usage
-
-### 1) Grab your Slack team's export
-
-* Visit [https://my.slack.com/services/export](https://my.slack.com/services/export)
-* Create an export
-* Wait for it to complete
-* Refresh the page and download the export (.zip file) into whatever directory
-
-### 2) Point `slack-export-viewer` to it
-
-Point slack-export-viewer to the .zip file and let it do its magic
-
-```bash
-slack-export-viewer -z /path/to/export/zip
-```
-
-If everything went well, your archive will have been extracted, processed, and browser window will have opened showing your *#general* channel from the export.
 
 
 ## Installation
@@ -64,6 +51,26 @@ Options:
   --debug
   --help              Show this message and exit.
 ```
+
+
+## Usage
+
+### 1) Grab your Slack team's export
+
+* Visit [https://my.slack.com/services/export](https://my.slack.com/services/export)
+* Create an export
+* Wait for it to complete
+* Refresh the page and download the export (.zip file) into whatever directory
+
+### 2) Point `slack-export-viewer` to it
+
+Point slack-export-viewer to the .zip file and let it do its magic
+
+```bash
+slack-export-viewer -z /path/to/export/zip
+```
+
+If everything went well, your archive will have been extracted, processed, and browser window will have opened showing your *#general* channel from the export.
 
 
 ## Acknowledgements
